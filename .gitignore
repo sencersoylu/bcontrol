@@ -1,6 +1,7 @@
 node_modules/
 .DS_Store
 *.log
+logs/
 
 # Proprietary Bauer manufacturer document — kept out of the public repo.
 # The register map it describes is transcribed into lib/registerMap.js + lib/messages.js.
