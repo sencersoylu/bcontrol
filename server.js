@@ -34,6 +34,7 @@ async function main() {
     console.log(`[modbus] connected to ${cfg.host}:${cfg.port} (unit ${cfg.unitId}, profile ${cfg.profile})`);
   } catch (e) {
     console.error('[modbus] initial connect failed, will retry:', e.message);
+    bridge._reconnect(); // kick off the retry loop so we keep trying until connected
   }
 
   bridge.startPolling(
